@@ -45,8 +45,6 @@ contactForm.addEventListener('submit', function (e) {
     }
 
     if (isValid) {
-        // Si toutes les validations passent, vous pouvez envoyer le formulaire au serveur
-        // Ici, vous pouvez ajouter le code pour envoyer les données au serveur
         window.location.href = 'confim_contact.html';
     }
 });

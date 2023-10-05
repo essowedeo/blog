@@ -1,4 +1,3 @@
-// Récupération des éléments du formulaire
 const loginForm = document.getElementById('login-form');
 const nomUtilisateurInput = document.getElementById('nom_utilisateur');
 const emailInput = document.getElementById('email');
@@ -6,16 +5,13 @@ const contactInput = document.getElementById('contact');
 const passwordInput = document.getElementById('password');
 const errorContainer = document.getElementById('error-container');
 
-// Écouteur d'événement pour la soumission du formulaire
 loginForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Réinitialisation des messages d'erreur
     clearErrors();
 
     let isValid = true;
 
-    // Validation du nom d'utilisateur
     const nomUtilisateurValue = nomUtilisateurInput.value.trim();
     if (nomUtilisateurValue === '' || /^[0-9!@#$%^&*()_+|~=`{}\[\]:";'<>?,.\/\\-]/.test(nomUtilisateurValue) || nomUtilisateurValue.length < 3) {
         displayError('Le nom d\'utilisateur est invalide. Il doit comporter au moins 3 caractères et ne pas commencer par un chiffre ou un signe.');
